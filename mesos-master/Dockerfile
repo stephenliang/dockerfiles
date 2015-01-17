@@ -6,4 +6,4 @@ RUN sudo apt-key adv --keyserver keyserver.ubuntu.com --recv E56151BF && \
 	sudo apt-get -y install mesos
 
 CMD mesos-master
-EXPOSE 8080
+EXPOSE 5050
