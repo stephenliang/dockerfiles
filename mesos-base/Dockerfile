@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y build-essential && \
 	curl https://archive.apache.org/dist/mesos/${VERSION}/mesos-${VERSION}.tar.gz | tar -xvz -C /opt/  && \
 	apt-get install -y ${BUILD_DEPS} && \
 	cd /opt/mesos* && \
+	./configure && \
 	make && \
 	make install && \
 	rm -rf /opt/mesos* && \
