@@ -15,5 +15,6 @@ RUN apt-get update && apt-get install -y ${RUNTIME_BUILD_DEPS} && \
 	./configure && \
 	make && \
 	make install && \
+	ldconfig && \
 	rm -rf /opt/mesos* && \
 	apt-get purge -y --auto-remove ${RUNTIME_BUILD_DEPS}
